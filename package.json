@@ -20,11 +20,6 @@
     "code-generation"
   ],
   "activationEvents": [
-    "onCommand:quantumAI.analyzeCode",
-    "onCommand:quantumAI.generateFeature",
-    "onCommand:quantumAI.optimizeCode",
-    "onCommand:quantumAI.setupQuantumEnvironment",
-    "onCommand:quantumAI.viewAgentStatus",
     "onLanguage:python",
     "onLanguage:javascript",
     "onLanguage:typescript",
@@ -101,7 +96,7 @@
           "command": "quantumAI.viewAgentStatus"
         }
       ]
-    ],
+    },    
     "configuration": {
       "title": "Quantum AI Assistant",
       "properties": {
@@ -136,14 +131,6 @@
         }
       }
     },
-    "views": {
-      "explorer": [
-        {
-          "id": "quantumAI.agentStatus",
-          "name": "Quantum AI Agents"
-        }
-      ]
-    },
     "viewsContainers": {
       "activitybar": [
         {
@@ -154,6 +141,12 @@
       ]
     },
     "views": {
+      "explorer": [
+        {
+          "id": "quantumAI.agentStatus",
+          "name": "Quantum AI Agents"
+        }
+      ],
       "quantumAI": [
         {
           "id": "quantumAI.agentStatus",
