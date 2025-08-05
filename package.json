@@ -1,0 +1,191 @@
+{
+  "name": "quantum-ai-assistant",
+  "displayName": "Quantum AI Code Assistant",
+  "description": "Multi-agent AI assistant with quantum optimization for code intelligence",
+  "version": "1.0.0",
+  "publisher": "quantum-ai",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "ai",
+    "quantum",
+    "multi-agent",
+    "code-analysis",
+    "code-generation"
+  ],
+  "activationEvents": [
+    "onCommand:quantumAI.analyzeCode",
+    "onCommand:quantumAI.generateFeature",
+    "onCommand:quantumAI.optimizeCode",
+    "onCommand:quantumAI.setupQuantumEnvironment",
+    "onCommand:quantumAI.viewAgentStatus",
+    "onLanguage:python",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:java",
+    "onLanguage:csharp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quantumAI.analyzeCode",
+        "title": "🔬 Analyze Code with Quantum AI",
+        "category": "Quantum AI"
+      },
+      {
+        "command": "quantumAI.generateFeature",
+        "title": "⚡ Generate Feature with AI",
+        "category": "Quantum AI"
+      },
+      {
+        "command": "quantumAI.optimizeCode",
+        "title": "🚀 Optimize Code Performance",
+        "category": "Quantum AI"
+      },
+      {
+        "command": "quantumAI.setupQuantumEnvironment",
+        "title": "🌌 Setup Quantum Environment",
+        "category": "Quantum AI"
+      },
+      {
+        "command": "quantumAI.viewAgentStatus",
+        "title": "👥 View Agent Status",
+        "category": "Quantum AI"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "quantumAI.analyzeCode",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      },
+      {
+        "command": "quantumAI.generateFeature",
+        "key": "ctrl+shift+g",
+        "mac": "cmd+shift+g"
+      },
+      {
+        "command": "quantumAI.optimizeCode",
+        "key": "ctrl+shift+o",
+        "mac": "cmd+shift+o"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "quantumAI.analyzeCode",
+          "group": "quantumAI",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "quantumAI.generateFeature",
+          "group": "quantumAI"
+        },
+        {
+          "command": "quantumAI.optimizeCode",
+          "group": "quantumAI"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "quantumAI.setupQuantumEnvironment"
+        },
+        {
+          "command": "quantumAI.viewAgentStatus"
+        }
+      ]
+    ],
+    "configuration": {
+      "title": "Quantum AI Assistant",
+      "properties": {
+        "quantumAI.modelPath": {
+          "type": "string",
+          "default": "./models/10b-model",
+          "description": "Path to the 10B parameter model"
+        },
+        "quantumAI.quantumEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable quantum optimization"
+        },
+        "quantumAI.vectorDBPath": {
+          "type": "string",
+          "default": "./vector_db",
+          "description": "Path to vector database"
+        },
+        "quantumAI.maxContextLength": {
+          "type": "number",
+          "default": 8192,
+          "description": "Maximum context length for LLM"
+        },
+        "quantumAI.agentTemperature": {
+          "type": "object",
+          "default": {
+            "researcher": 0.7,
+            "engineer": 0.3,
+            "analyst": 0.5
+          },
+          "description": "Temperature settings for each agent"
+        }
+      }
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "quantumAI.agentStatus",
+          "name": "Quantum AI Agents"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "quantumAI",
+          "title": "Quantum AI",
+          "icon": "resources/quantum-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "quantumAI": [
+        {
+          "id": "quantumAI.agentStatus",
+          "name": "Agent Status"
+        },
+        {
+          "id": "quantumAI.quantumStatus",
+          "name": "Quantum Status"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "typescript": "^4.8.4",
+    "vsce": "^2.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+} 

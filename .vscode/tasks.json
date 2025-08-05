@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "watch",
+            "problemMatcher": "$tsc-watch",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "compile",
+            "group": "build",
+            "presentation": {
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Start Python Backend",
+            "type": "shell",
+            "command": "python",
+            "args": ["python/quantum_ai_backend.py"],
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "reveal": "always"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Install Python Dependencies",
+            "type": "shell",
+            "command": "pip",
+            "args": ["install", "-r", "python/requirements.txt"],
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "reveal": "always"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+} 

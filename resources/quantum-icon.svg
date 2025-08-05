@@ -1,0 +1,34 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Quantum circuit background -->
+  <rect x="2" y="2" width="20" height="20" rx="4" fill="url(#quantumGradient)" opacity="0.1"/>
+  
+  <!-- Quantum qubits (circles) -->
+  <circle cx="6" cy="8" r="1.5" fill="#667eea" opacity="0.8"/>
+  <circle cx="12" cy="8" r="1.5" fill="#667eea" opacity="0.8"/>
+  <circle cx="18" cy="8" r="1.5" fill="#667eea" opacity="0.8"/>
+  
+  <!-- Quantum gates (squares) -->
+  <rect x="5" y="6.5" width="2" height="3" fill="#764ba2" opacity="0.6"/>
+  <rect x="11" y="6.5" width="2" height="3" fill="#764ba2" opacity="0.6"/>
+  <rect x="17" y="6.5" width="2" height="3" fill="#764ba2" opacity="0.6"/>
+  
+  <!-- Quantum entanglement lines -->
+  <line x1="7" y1="8" x2="11" y2="8" stroke="#667eea" stroke-width="1" opacity="0.6"/>
+  <line x1="13" y1="8" x2="17" y2="8" stroke="#667eea" stroke-width="1" opacity="0.6"/>
+  
+  <!-- AI brain symbol -->
+  <circle cx="12" cy="16" r="3" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.8"/>
+  <path d="M10 16 L14 16 M12 14 L12 18" stroke="#667eea" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Quantum superposition symbol -->
+  <path d="M8 12 L16 12" stroke="#764ba2" stroke-width="1" opacity="0.6"/>
+  <circle cx="8" cy="12" r="1" fill="#764ba2" opacity="0.6"/>
+  <circle cx="16" cy="12" r="1" fill="#764ba2" opacity="0.6"/>
+</svg> 

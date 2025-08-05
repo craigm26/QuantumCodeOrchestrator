@@ -1,0 +1,28 @@
+{
+  "model_path": "./models/10b-model",
+  "db_path": "./vector_db",
+  "monitor_paths": ["./src", "./python", "./test_example.py"],
+  "port": 8000,
+  "host": "127.0.0.1",
+  "log_level": "INFO",
+  "quantum_enabled": true,
+  "max_context_length": 8192,
+  "agent_temperatures": {
+    "researcher": 0.7,
+    "engineer": 0.3,
+    "analyst": 0.5
+  },
+  "file_extensions": [".py", ".js", ".ts", ".jsx", ".tsx", ".java", ".cpp", ".c", ".h"],
+  "debounce_delay": 1.0,
+  "update_interval": 1.0,
+  "max_events": 1000,
+  "chart_update_interval": 10,
+  "lm_studio": {
+    "enabled": true,
+    "api_url": "http://localhost:1234/v1",
+    "api_key": "not-needed",
+    "model_name": "gpt-oss-20b",
+    "max_tokens": 2048,
+    "timeout": 30
+  }
+} 

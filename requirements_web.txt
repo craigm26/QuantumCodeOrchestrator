@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+websockets
+watchdog
+networkx
+matplotlib
+aiofiles
+python-multipart
+aiohttp 
